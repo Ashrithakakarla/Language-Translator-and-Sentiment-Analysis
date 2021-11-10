@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<center>
+<h1>Language Translator and Sentiment Analysis</h1>
+
+<p>Type only text to find sentiment analysis</p>
+
+<form method="post">
+  <label for="fname">Text:</label>
+  <input type="text" id="fname" name="texttospeech"><br><br>
+  <label for="lname">Source language:</label>
+  <input type="text" id="lname" name="sourcelanguage"><br><br>
+<label for="lname">Target language:</label>
+  <input type="text" id="lname" name="targetlanguage"><br><br>
+  Gender <br>
+  <input type="radio" name="gender" value="male">Male
+  <input type="radio" name="gender" value="female">Female<br><br><br>
+  <button type="submit" formaction="/sound">Translate</button>
+  <button type="submit" formaction="/sentiment">Sentiment</button>
+</form>
+<br><br>
+{% if conversion %}
+<h2>{{ conversion }}</h2>
+{% endif %}
+
+{% if result %}
+<h2>{{ result }}</h2>
+{% endif %}
+</center>
+</body>
+</html>
